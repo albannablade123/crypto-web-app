@@ -12,67 +12,71 @@ import {
 const DUMMY_DATE = [
   {
     id: 1,
-    name: "Hertha",
-    last_price: 10,
-    change: "hoshea0@umn.edu",
-    market_cap: "Female",
+    name: "Bitcoin",
+    value: "BTC",
+    last_price: "287,460,659",
+    change: -2.5,
+    market_cap: "658,367.22B",
   },
   {
     id: 2,
-    name: "Orin",
-    last_price: 83,
-    change: "opettie1@freewebs.com",
-    market_cap: "Male",
+    name: "Ethereum",
+    value: "ETH",
+    last_price: "20,172,310.38",
+    change: 0.5,
+    market_cap: "271,022.67B",
   },
   {
     id: 3,
-    name: "Rosemonde",
-    last_price: 36,
-    change: "rfuncheon2@hp.com",
-    market_cap: "Female",
+    name: "Cardano",
+    value: "ADA",
+    last_price: "6,784.64",
+    change: 5.6,
+    market_cap: "231,912.86B",
   },
   {
     id: 4,
-    name: "Pris",
-    last_price: 44,
-    change: "pcoley3@google.ru",
-    market_cap: "Female",
+    name: "Galxe",
+    value: "GAL",
+    last_price: "37,775.93",
+    change: -1.4,
+    market_cap: "1,328.25B",
   },
   {
     id: 5,
-    name: "Tessa",
-    last_price: 51,
-    change: "tmacane4@economist.com",
-    market_cap: "Female",
+    name: "Terra Classic",
+    value: "LUNC",
+    last_price: "4.338",
+    change: -3.2,
+    market_cap: " 9,669.83B",
   },
 ];
 
 const PopularCryptocurrenciesTable = () => {
-    const divStyle = ({
-        margin: "auto",
-        fontColor: "white",
-      });
+  const divStyle = {
+    margin: "auto",
+    fontColor: "white",
+  };
 
+  const rowStyleTitle = {
+    color: "white",
+    fontWeight: "700",
+    textAlign: "center",
+    border: "none",
+  };
 
-      const rowStyleTitle = ({
-        color: 'white',
-        fontWeight: '700',
-        textAlign: "center",
-        border: 'none',
-      })
+  const rowStyle = {
+    color: "white",
+    textAlign: "center",
+    border: "none",
+    marginBottom: "1px",
+    fontSize: "16px",
+  };
 
-      const rowStyle = ({
-        color: 'white',
-        textAlign: "center",
-        border: 'none',
-      })
+  const rowBottom = {
+    border: "none",
+  };
 
-      const rowBottom = ({
-        border: 'none',
-       
-      })
-
-      
   return (
     <div style={divStyle}>
       <TableContainer
@@ -82,11 +86,10 @@ const PopularCryptocurrenciesTable = () => {
           color: "white",
           width: "90%",
           textAlign: "center",
-          boxShadow: '8px 8px 40px 0px #00000040',
-          
+          boxShadow: "8px 8px 40px 0px #00000040",
         }}
       >
-        <Table style={{ fontColor: 'white', color: 'white', border: 'none'}}>
+        <Table style={{ fontColor: "white", color: "white", border: "none" }}>
           <TableHead sx={rowBottom}>
             <TableRow sx={rowBottom}>
               <TableCell sx={rowStyleTitle}>Name</TableCell>
@@ -98,9 +101,24 @@ const PopularCryptocurrenciesTable = () => {
           <TableBody>
             {DUMMY_DATE.map((row) => (
               <TableRow key={row.id}>
-                <TableCell sx={rowStyle}>{row.name}</TableCell>
-                <TableCell sx={rowStyle}>{row.last_price}</TableCell>
-                <TableCell sx={rowStyle}>{row.change}</TableCell>
+                <TableCell sx={rowStyle}>
+                  {row.name}&nbsp;&nbsp;&nbsp;
+                  <b style={{ color: "#7C7983", fontWeight: "300" }}>
+                    {row.value}
+                  </b>
+                </TableCell>
+                <TableCell sx={rowStyle}>Rp {row.last_price}</TableCell>
+                <TableCell
+                  sx={{
+                    color: row.change > 0 ? "#1BCC4D" : "red",
+                    textAlign: "center",
+                    border: "none",
+                    marginBottom: "1px",
+                    fontSize: "16px",
+                  }}
+                >
+                  {row.change}&nbsp;%
+                </TableCell>
                 <TableCell sx={rowStyle}>{row.market_cap}</TableCell>
               </TableRow>
             ))}

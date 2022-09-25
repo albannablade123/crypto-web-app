@@ -1,0 +1,36 @@
+.chart{
+
+}
+
+.container{
+    padding-left: 9%;
+    padding-right: 9%;
+    padding-bottom: 5%;
+}
+
+.paper{
+    background-color: transparent;
+    height: 50%;
+}
+
+.paper img{
+    background-color: transparent;
+    height: 30%;
+}
+
+.paper h2{
+    background-color: transparent;
+    text-align: left;
+    color: white;
+    margin-bottom: 5%;
+    margin-left: 10%;
+}
+
+
+.vector{
+    height: 10%;
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+    margin-top: 10%;
+}

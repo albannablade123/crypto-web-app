@@ -1,26 +1,27 @@
-.landingImage{
+.landingImage {
     width: 100%;
     height: 35rem;
     z-index: 0;
     overflow: hidden;
     display: flex;
+    animation: image-appear 1s ease-out forwards;
     opacity: 40%;
 }
 
-.landingImage img{
+.landingImage img {
     position: relative;
     height: 100%;
-    
+
 }
 
 .ctaButton {
     position: relative;
     top: 15%;
     height: 100%;
-    
+
 }
 
-.right{
+.right {
     position: absolute;
     top: 35%;
     right: 0%;
@@ -28,22 +29,22 @@
 
 }
 
-.right button{
-        width: 24rem;
-        height: 9rem;
-        background-color:  #E7B400E5;
-        border: none;
-        border-radius: 20px;
-        position: relative;
-        font-size: 45px;
-        font-weight: 800;
-        color: white;
-    
+.right button {
+    width: 24rem;
+    height: 9rem;
+    background-color: #E7B400E5;
+    border: none;
+    border-radius: 20px;
+    position: relative;
+    font-size: 45px;
+    font-weight: 800;
+    color: white;
+    cursor: pointer;
 }
 
 
 
-.centered{
+.centered {
     position: absolute;
     top: 15%;
     text-align: left;
@@ -53,3 +54,15 @@
     margin-left: 5%;
     font-weight: 800;
 }
+
+@keyframes image-appear {
+    from {
+      opacity: 0;
+      transform: translateY(3rem);
+    }
+  
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }

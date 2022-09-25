@@ -1,11 +1,15 @@
-import React from "react";
+import React,{ useEffect } from "react";
 import { Fragment } from "react";
 import LandingPageImg from "../../assets/images/background_image.jpg";
 import classes from "./LandingPage.module.css";
-import CtaButton from "./CtaButton";
 import PopularCryptocurrencies from "../LandingPage/PopularCryptocurrencies";
 import BenefitsSection from "../LandingPage/BenefitsSection";
-const LandingPageImage = () => {
+const LandingPageImage = (props) => {
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+  
   return (
     <Fragment className={classes.landingImage}>
       <img src={LandingPageImg} className={classes.landingImage} alt="" />
@@ -14,11 +18,10 @@ const LandingPageImage = () => {
         blockchain today
       </h1>
       <div className={classes.right}>
-        <button >Register Now</button>
+        <button onClick={props.onShowRegister}>Register Now</button>
       </div>
-      <PopularCryptocurrencies/>
-      <BenefitsSection/>
-
+      <PopularCryptocurrencies onShowRegister={props.onShowRegister} />
+      <BenefitsSection />
     </Fragment>
   );
 };

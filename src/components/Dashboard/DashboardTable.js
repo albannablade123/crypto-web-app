@@ -8,43 +8,50 @@ import {
   TableCell,
   Paper,
 } from "@mui/material";
-import classes from './DashboardTable.module.css'
+import classes from "./DashboardTable.module.css";
 
 const DUMMY_DATE = [
   {
     id: 1,
-    name: "Hertha",
-    last_price: 10,
-    change: "hoshea0@umn.edu",
-    market_cap: "Female",
+    name: "BNB",
+    amount_owned: 0.0000881047,
+    price: "30,000",
+    change: -1.77,
   },
   {
     id: 2,
-    name: "Orin",
-    last_price: 83,
-    change: "opettie1@freewebs.com",
-    market_cap: "Male",
+    name: "BUSD",
+    amount_owned: 18.59,
+    price: "10,00",
+    change: -1.77,
   },
   {
     id: 3,
-    name: "Rosemonde",
-    last_price: 36,
-    change: "rfuncheon2@hp.com",
-    market_cap: "Female",
+    name: "Ethereum",
+    amount_owned: 0.000002,
+    price: "39,000",
+    change: -0.82,
   },
   {
     id: 4,
-    name: "Pris",
-    last_price: 44,
-    change: "pcoley3@google.ru",
-    market_cap: "Female",
+    name: "Rupiah",
+    amount_owned: 50000,
+    price: "0",
+    change: 0,
   },
   {
     id: 5,
-    name: "Tessa",
-    last_price: 51,
-    change: "tmacane4@economist.com",
-    market_cap: "Female",
+    name: "Galxe",
+    amount_owned: 10.5,
+    price: "302,242",
+    change: 0.02,
+  },
+  {
+    id: 6,
+    name: "SHIBA",
+    amount_owned: 10000,
+    price: "1,629",
+    change: 0.09,
   },
 ];
 
@@ -69,14 +76,9 @@ const DashboardTable = () => {
     border: "none",
   };
 
-  const divStyle = ({
-    margin: "auto",
-    fontColor: "white",
-  });
-
   return (
     <div className={classes.dashboardTable}>
-        <h2>My Crypto Holdings</h2>
+      <h2>My Crypto Holdings</h2>
       <TableContainer
         component={Paper}
         style={{
@@ -86,7 +88,14 @@ const DashboardTable = () => {
           textAlign: "center",
         }}
       >
-        <Table style={{ fontColor: "white", color: "white", border: "none" , margin: "0px"}}>
+        <Table
+          style={{
+            fontColor: "white",
+            color: "white",
+            border: "none",
+            margin: "0px",
+          }}
+        >
           <TableHead sx={rowBottom}>
             <TableRow sx={rowBottom}>
               <TableCell sx={rowStyleTitle}>Name</TableCell>
@@ -99,9 +108,19 @@ const DashboardTable = () => {
             {DUMMY_DATE.map((row) => (
               <TableRow key={row.id}>
                 <TableCell sx={rowStyle}>{row.name}</TableCell>
-                <TableCell sx={rowStyle}>{row.last_price}</TableCell>
-                <TableCell sx={rowStyle}>{row.change}</TableCell>
-                <TableCell sx={rowStyle}>{row.market_cap}</TableCell>
+                <TableCell sx={rowStyle}>{row.amount_owned}</TableCell>
+                <TableCell sx={rowStyle}>{row.price}</TableCell>
+                <TableCell
+                  sx={{
+                    color: row.change > 0 ? "#1BCC4D" : "red",
+                    textAlign: "center",
+                    border: "none",
+                    marginBottom: "1px",
+                    fontSize: "16px",
+                  }}
+                >
+                  {row.change > 0 ?"+":''}{row.change}%
+                </TableCell>
               </TableRow>
             ))}
           </TableBody>

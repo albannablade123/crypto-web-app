@@ -10,3 +10,17 @@
     margin-left: 8%;
     color: #D1A306;
 }
+
+.unauthorized{
+    height: 20rem;
+    text-align: center;
+    padding: 10%;
+    font-weight: 300;
+    color: white;
+}
+
+
+.unauthorized h1{
+    font-weight: 300;
+    color: white;
+}

@@ -1,32 +1,130 @@
-.registerModal{
+.registerModal {
     padding: 3%;
     color: white;
+    margin-left: 7%;
+    margin-right: 8%;
+
 }
 
-.registerModal input{
+.registerTitle {
+    position: relative;
+}
+
+.registerButton {
+    text-align: center;
+    height: 3rem;
+    width: 12.5rem;
+    border-radius: 20px;
+    background-color: #E7B400E5;
+    border: none;
+    color: white;
+    font-weight: 800;
+    font-size: 100%;
+    font-family: Inter;
+    margin-left: 30%;
+    margin-top: 5%;
+   
+}
+
+.registerTitle button {
+    position: absolute;
+    top: -10%;
+    right: -5%;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 2rem;
+    font-weight: 800;
+    cursor: pointer;
+}
+
+.registerModal h3 {
+    font-size: 2rem;
+    padding: 3%;
+    color: white;
+    margin-left: 7%;
+    margin-right: 8%;
+    text-align: left;
+}
+
+.registerModal h1 {
+    font-size: 2rem;
+    padding: 3%;
+    color: white;
+    margin-left: 7%;
+    margin-right: 8%;
+    text-align: left;
+}
+
+.registerEmail {
     margin-bottom: 5%;
+
+}
+
+.registerEmail input {
+    margin-top: 3%;
+    background: #2D2C57;
+    border: none;
+    width: 100%;
+    height: 2.5rem;
+    color: white;
+    font-size: 20px;
+    padding: 0% 2%;
+    outline: 0;
+    border-radius: 5px;
+}
+
+.registerEmail label {
+    font-weight: 600;
+    font-size: 20px;
+    padding-bottom: 3%;
+    outline: 0;
+}
+
+.registerEmail p {
+    color: #ff0033;
+    font-size: 12px;
+
+}
+
+.registerModal br {
+    margin-bottom: 7%;
+    background-color: yellow;
+    outline: 0;
+}
+
+.nameDiv {
+    display: flex;
+    justify-content: space-between;
+    margin-right: 8%;
+    outline: 0;
+}
+
+.inp1 {
+    margin-right: 5%;
+}
+
+.nameDiv label {
+    font-size: 17px;
+}
+
+.nameDiv input {
+    margin-top: 5%;
+    margin-bottom: 7%;
     background: #2D2C57;
     border: none;
     width: 100%;
     height: 2rem;
+    color: white;
+    font-size: 16px;
+    padding: 2% 3%;
+    border-radius: 5px;
+    margin-right: 4%;
+
 }
 
-.registerModal label{
-    margin-bottom: 5%;
-    font-weight: 600;
-    font-size: 20px;
-}
+.nameDiv p {
+    color: #ff0033;
+    font-size: 12px;
 
-.nameDiv{
-    display: flex;
-}
-.nameDiv label{
-    margin-right: 3rem;
-}
-.nameDiv input{
-    margin-bottom: 5%;
-    background: #2D2C57;
-    border: none;
-    width: 9rem;
-    height: 2rem;
 }

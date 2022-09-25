@@ -9,10 +9,11 @@
   }
 
   .modal {
+    padding: 10%;
     position: fixed;
-    top: 20vh;
+    top: 10vh;
     left: 5%;
-    height: 727px;
+    height: 85vh;
     width: 789px;
     background: linear-gradient(180deg, #111042 0%, #140035 100%);
     padding: 1rem;
@@ -20,6 +21,7 @@
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
     z-index: 30;
     animation: slide-down 300ms ease-out forwards;
+    overflow: auto;
   }
   
   @media (min-width: 768px) {
