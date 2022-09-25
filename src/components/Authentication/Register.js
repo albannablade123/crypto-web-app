@@ -20,7 +20,6 @@ const Register = (props) => {
     hasError: firstNameHasError,
     valueChangeHandler: firstNameChangedHandler,
     inputBlurHandler: firstNameBlurHandler,
-    reset: resetFirstNameInput,
   } = useInput((value) => value.trim() !== "");
 
   const {
@@ -29,7 +28,6 @@ const Register = (props) => {
     hasError: lastNameHasError,
     valueChangeHandler: lastNameChangedHandler,
     inputBlurHandler: lastNameBlurHandler,
-    reset: resetLastNameInput,
   } = useInput((value) => value.trim() !== "");
 
   const {
@@ -38,7 +36,6 @@ const Register = (props) => {
     hasError: emailInputHasError,
     valueChangeHandler: emailChangedHandler,
     inputBlurHandler: emailBlurHandler,
-    reset: resetEmailInput,
   } = useInput((value) => validateEmail(value.trim()));
 
   const {
@@ -47,7 +44,6 @@ const Register = (props) => {
     hasError: passwordInputHasError,
     valueChangeHandler: passwordChangedHandler,
     inputBlurHandler: passwordBlurHandler,
-    reset: passwordEmailInput,
   } = useInput((value) => validatePassword(value.trim()));
 
   const {
@@ -56,7 +52,6 @@ const Register = (props) => {
     hasError: confirmPasswordInputHasError,
     valueChangeHandler: confirmPasswordChangedHandler,
     inputBlurHandler: confirmPasswordBlurHandler,
-    reset: confirmPasswordEmailInput,
   } = useInput((value) => value.trim() === enteredPassword);
 
   const confirmHandler = (event) => {
@@ -74,13 +69,6 @@ const Register = (props) => {
     }
 
     props.onCloseRegister();
-
-    // props.onConfirm({
-    //   name: enteredName,
-    //   street: enteredStreet,
-    //   city: enteredCity,
-    //   postalCode: enteredPostalCode,
-    // });
   };
 
   return (
