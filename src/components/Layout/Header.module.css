@@ -1,0 +1,53 @@
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5.4rem;
+    background-color: #070124;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 8%;
+    z-index: 10;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+    font-family: 'Inconsolata', monospace;
+}
+
+.header h1{
+    size: 1rem;
+    font-size: 2rem;
+}
+
+
+.header button{
+    size: 1rem;
+    font-size: 1rem;
+    background-color: transparent;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+
+
+.main-image {
+    width: 100%;
+    height: 25rem;
+    z-index: 0;
+    overflow: hidden;
+}
+
+.main-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.header div{
+    margin-right: 10rem;
+    display: flex;
+    justify-content: space-between;
+    width: 17%;
+}

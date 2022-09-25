@@ -1,0 +1,46 @@
+.crypto {
+    margin-left: 10rem;
+    margin-top: 6rem;
+    margin-bottom: 6rem;
+}
+
+.crypto h1 {
+    font-size: 36px;
+    font-weight: 800;
+    line-height: 44px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: white;
+    margin-bottom: 4rem;
+
+}
+
+.crypto h3 {
+    
+    font-size: 16px;
+    font-weight: 800;
+    line-height: 19px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: white;
+    margin-right: 1rem;
+}
+
+.cta{
+    display: flex;
+    margin-top: 2rem;
+}
+
+.crypto button{
+    width: 7rem;
+    height: 2rem;
+    background-color:  #E7B400E5;
+    border: none;
+    border-radius: 10px;
+    font-size: 8px;
+    font-weight: 800;
+    color: white;
+    align-items: center;
+    align-content: center;
+    margin-top: 0.5rem;
+}

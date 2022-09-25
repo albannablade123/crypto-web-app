@@ -1,0 +1,28 @@
+.benefits {
+    margin-left: 5%;
+    margin-bottom: 8rem;
+    margin-right: 5%;
+}
+
+.benefits h1 {
+    font-size: 36px;
+    font-weight: 800;
+    line-height: 44px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: white;
+    margin-bottom: 5%;
+
+}
+
+.benefits_row{
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 4%;
+}
+
+.benefits_row_two{
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 2rem;
+}

@@ -1,23 +1,27 @@
 import logo from './logo.svg';
 import './App.css';
+import Header from './components/Layout/Header';
+import LandingPageImage from './components/UI/LandingPage';
+import Profile from './components/Dashboard/Dashboard';
+import Register from './components/Authentication/Register';
+import { useState } from 'react';
 
 function App() {
+  const [registerIsShown, setRegisterIsShown] = useState(false)
+  
+  const showRegisterHandler = () => {
+    setRegisterIsShown(true)
+  }
+
+  const hideRegisterHandler = () => {
+    setRegisterIsShown(false)
+  }
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {registerIsShown && <Register onCloseRegister={hideRegisterHandler}/>}
+      <Header onShowRegister={showRegisterHandler}/>
+      <Profile/>
+      {/* <LandingPageImage/> */}
     </div>
   );
 }

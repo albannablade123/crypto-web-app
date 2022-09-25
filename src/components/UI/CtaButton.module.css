@@ -1,0 +1,11 @@
+.ctaButton {
+    width: 24rem;
+    height: 9rem;
+    background-color:  #E7B400E5;
+    border: none;
+    border-radius: 20px;
+    position: relative;
+    font-size: 45px;
+    font-weight: 800;
+    color: white;
+}

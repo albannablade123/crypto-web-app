@@ -1,0 +1,72 @@
+.myBalance {
+    margin: 6rem;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.myBalance h2 {
+    font-size: 40px;
+    font-weight: 800;
+    line-height: 48px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #D1A306;
+}
+
+.myBalance h3 {
+    font-size: 32px;
+    font-weight: 800;
+    line-height: 39px;
+    letter-spacing: 0em;
+    text-align: left;
+
+    color: white;
+}
+
+.myBalance img {
+    width: 245px;
+    height: 235px;
+    margin-left: 4%;
+    margin-right: 4%;
+}
+
+.myButton {
+    display: flex;
+    margin-top: 1%;
+    text-align: left;
+}
+
+.identifier {
+    width: 30%;
+    margin: auto;
+    padding: 2%;
+    text-align: center;
+}
+
+.identifier h6 {
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: white;
+    margin: 0%;
+
+
+}
+
+.myButton button {
+    font-size: 14px;
+    line-height: 39px;
+    letter-spacing: 0em;
+    text-align: center;
+    width: 130px;
+    height: 40px;
+    border-radius: 10px;
+    background-color: #03021A;
+    color: white;
+    font-weight: 800;
+    margin-right: 1.8%;
+    border: none;
+}
