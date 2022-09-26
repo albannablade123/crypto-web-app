@@ -109,7 +109,7 @@ const DashboardTable = () => {
               <TableRow key={row.id}>
                 <TableCell sx={rowStyle}>{row.name}</TableCell>
                 <TableCell sx={rowStyle}>{row.amount_owned}</TableCell>
-                <TableCell sx={rowStyle}>{row.price}</TableCell>
+                <TableCell sx={rowStyle}>Rp {row.price}</TableCell>
                 <TableCell
                   sx={{
                     color: row.change > 0 ? "#1BCC4D" : "red",
