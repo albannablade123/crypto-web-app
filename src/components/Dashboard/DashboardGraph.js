@@ -75,7 +75,7 @@ const DashboardGraph = () => {
 function Item(props) {
   return (
     <Paper className={classes.paper}>
-      <h2>{props.item.name}</h2>
+      <h3>{props.item.name}</h3>
       <img src={props.item.image} style={{backgroundImage:'transparent'}} alt="" />
     </Paper>
   );

@@ -11,6 +11,13 @@
 .paper{
     background-color: transparent;
     height: 50%;
+    padding: 2%;
+}
+
+.paper h3{
+    color: #070124;
+    text-align: left;
+    
 }
 
 .paper img{
